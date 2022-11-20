@@ -1,4 +1,4 @@
 
 angular
     .module('app')
-    .component('homeCtrl');
+    .component('homeController');

@@ -3,6 +3,7 @@
 
 <head>
 
+    <base href="/">
     <title>ToDoList App</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
@@ -13,98 +14,47 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
 
-    <style>
-        .main {
-            width: 100%;
-            height: 1000px;
-            background: darkcyan;
-        }
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+        
+    <!-- Header component -->
+    <script src="components/header/header-module.js"></script>
+    <script src="components/header/header-controller.js"></script>
+    <script src="components/header/header-component.js"></script>
+    <link rel="stylesheet" href="components/header/header.css">
 
-        .header {
-            width: 100%;
-            height: 40px;
-            background: darkred;
-            color: white;
-        }
+    <!-- Navigation component -->
+    <script src="components/navigation/navigation-module.js"></script>
+    <script src="components/navigation/navigation-controller.js"></script>
+    <script src="components/navigation/navigation-config.js"></script>
+    <script src="components/navigation/navigation-component.js"></script>
+    <link rel="stylesheet" href="components/navigation/navigation.css">
 
-        .header-left {
-            float: left;
-            width: 50%;
-            height: 40px;
-            background: darkblue;
-            color: white;
-        }
+    <!-- Tasks component -->
+    <script src="components/tasks/tasks-module.js"></script>
+    <script src="components/tasks/tasks-controller.js"></script>
+    <script src="components/tasks/tasks-component.js"></script>
+    <link rel="stylesheet" href="components/tasks/tasks.css">
 
-        .header-right {
-            float: left;
-            width: 50%;
-            height: 40px;
-            background: darkolivegreen;
-            color: white;
-        }
+    <!-- Home template -->
+    <script src="templates/home/home-module.js"></script>
+    <script src="templates/home/home-controller.js"></script>
 
-        .navigation {
-            width: 100%;
-            height: 35px;
-            background: darkred;
-            color: white;
-        }
+    <!-- Very imp. template -->
+    <script src="templates/very-imp/very-imp-module.js"></script>
+    <script src="templates/very-imp/very-imp-controller.js"></script>
 
-        .navBar {
-            list-style-type: none;
-            text-align: center;
-            word-spacing: 50px;
-        }
+    <!-- Imp. template -->
+    <script src="templates/imp/imp-module.js"></script>
+    <script src="templates/imp/imp-controller.js"></script>
 
-        .navList {
-            display: inline-block;
-            letter-spacing: 1px;
-            word-spacing: 1px;
-        }
+    <!-- Less imp. template -->
+    <script src="templates/less-imp/less-imp-module.js"></script>
+    <script src="templates/less-imp/less-imp-controller.js"></script>
 
-        .nav {
-            color: white;
-            text-decoration: none;
-        }
-
-        .content {
-            width: 100%;
-            height: 925px;
-            background: darkgoldenrod;
-            color: white;
-        }
-
-        .edit {
-            float: left;
-            width: 25%;
-            height: 925px;
-            background: darksalmon;
-            color: white;
-        }
-
-        .buttons {
-            float: left;
-            width: 100%;
-            height: 500px;
-            background: darkgrey;
-            color: white;
-        }
-
-        .filters {
-            float: left;
-            width: 100%;
-            height: 425px;
-        }
-
-        .tasks {
-            float: left;
-            width: 75%;
-            height: 925px;
-            background: darkkhaki;
-            color: white;
-        }
-
-    </style>
+    <!-- Least imp. template  -->
+    <script src="templates/least-imp/least-imp-module.js"></script>
+    <script src="templates/least-imp/least-imp-controller.js"></script>
 
 </head>
 
@@ -112,42 +62,11 @@
     
     <div class="main">
 
-        <!-- -->
-        <div class="header">
-            <div class="header-left">
-                organize tasks
-            </div>
-
-            <div class="header-right">
-                login, search
-            </div>
-        </div>
-
-        <div class="navigation">
-            <ul class="navBar">
-                <li class="navList"><a href="home" class="nav">home</a></li>
-                <li class="navList"><a href="veryimp" class="nav">very important</a></li>
-                <li class="navList"><a href="imp" class="nav">important</a></li>
-                <li class="navList"><a href="lessimp" class="nav">less important</a></li>
-                <li class="navList"><a href="leastimp" class="nav">least important</a></li>
-            </ul>
-        </div>
-
-        <div class="content">
-            <div class="edit">
-                <div class="buttons">
-                    buttons
-                </div>
-                <div class="filters">
-                    filters
-                </div>
-            </div>
-
-            <div class="tasks">
-                list of tasks
-            </div>
-        </div>
-
+        <header></header>
+        <navigation></navigation>
+        <tasks></tasks>
+        <ui-view></ui-view>
+        
     </div>
 </body>
 </html>

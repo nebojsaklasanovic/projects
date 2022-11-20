@@ -1,0 +1,23 @@
+.navigation {
+    width: 100%;
+    height: 35px;
+    background: darkred;
+    color: white;
+}
+
+.navBar {
+    list-style-type: none;
+    text-align: center;
+    word-spacing: 50px;
+}
+
+.navList {
+    display: inline-block;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+.nav {
+    color: white;
+    text-decoration: none;
+}

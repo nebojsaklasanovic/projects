@@ -1,0 +1,36 @@
+.content {
+    width: 100%;
+    height: 925px;
+    background: darkgoldenrod;
+    color: white;
+}
+
+.edit {
+    float: left;
+    width: 25%;
+    height: 925px;
+    background: darksalmon;
+    color: white;
+}
+
+.buttons {
+    float: left;
+    width: 100%;
+    height: 500px;
+    background: darkgrey;
+    color: white;
+}
+
+.filters {
+    float: left;
+    width: 100%;
+    height: 425px;
+}
+
+.tasks {
+    float: left;
+    width: 75%;
+    height: 925px;
+    background: darkkhaki;
+    color: white;
+}
